@@ -83,3 +83,54 @@ modify the notebooks.
 [convnet-mnist]: notebooks/4_Convolutional_Neural_Network-based_Image_Classifier.ipynb
 [vggnet-imagenet]: notebooks/5_VGG_Net_16_the_easy_way.ipynb
 [style-transfer]: notebooks/6_Artistic_style_transfer_with_a_repurposed_VGG_Net_16.ipynb
+
+
+### Run on FloydHub
+
+First of all, create a new FloydHub project following [this guide](http://docs.floydhub.com/guides/basics/create_new/), then install the [Floyd-CLI](http://docs.floydhub.com/guides/basics/install/) and run the [login command](http://docs.floydhub.com/guides/basics/login/). After logged in, we are ready to get our hands dirty with this amazing tutorial which covers the basic concepts of Machine Learning, Deep Learning and style transfer.
+
+I have chosen to split the tutorial in two parts: the first one which can be followed with a CPU-istance and the other one with a GPU istance to speed up the training.
+
+#### PART 1 - CPU ISTANCE
+
+With a CPU istance you will be able to run the following Notebooks:
+
+1. Linear Image Classifier
+2. Neural Network based Image Classifier
+3. Neural Network based Image Classifier-2
+
+Floyd-CLI command:
+
+```bash
+floyd run --env tensorflow-1.0:py2 --data redeipirati/datasets/mnist/1 --mode jupyter
+```
+
+Note:
+
+I've already uploaded for you the MNIST dataset if you want to play with it. FloydHub istances have an impressive internet connection, so you can omit the data parameter because the dataset will be download in a few milliseconds.
+
+You can find my public project [here](https://www.floydhub.com/redeipirati/projects/artistic-style-transfer/1).
+
+#### PART 2 - GPU ISTANCE
+
+I reccomend to run these notebook with a GPU istance(it should take about 5/4 minutes per training vs about an hour on a CPU istance):
+
+4. Convolutional Neural Network based Image Classifier
+5. VGG Net 16 the easy way
+6. Artistic style transfer with a repurposed VGG Net 16
+
+Floyd-CLI command:
+
+```bash
+floyd run --gpu --env tensorflow-1.0:py2 --data redeipirati/datasets/mnist/1 --mode jupyter
+```
+
+Note:
+
+Notebooks 5 and 6 will download the VGGnet pretrained models(about 800MB of data), but as i said before they will be download in a few seconds.
+
+You can find my public project [here](https://www.floydhub.com/redeipirati/projects/artistic-style-transfer/2).
+
+### Contribution
+
+For any questions, bug(even typos) and/or features requests do not hesitate to contact me or open an issue!
