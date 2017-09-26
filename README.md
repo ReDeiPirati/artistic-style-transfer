@@ -95,9 +95,9 @@ I have chosen to split the tutorial in two parts: the first one which can be fol
 
 With a CPU istance you will be able to run the following Notebooks:
 
-1. Linear Image Classifier
-2. Neural Network based Image Classifier
-3. Neural Network based Image Classifier-2
+1. [Linear Image Classifier](notebooks/1_Linear_Image_Classifier.ipynb)
+2. [Neural Network based Image Classifier](notebooks/2_Neural_Network-based_Image_Classifier-1.ipynb)
+3. [Neural Network based Image Classifier-2](notebooks/3_Neural_Network-based_Image_Classifier-2.ipynb)
 
 Floyd-CLI command:
 
@@ -107,7 +107,7 @@ floyd run --env tensorflow-1.0:py2 --data redeipirati/datasets/mnist/1 --mode ju
 
 Note:
 
-I've already uploaded for you the MNIST dataset if you want to play with it. FloydHub istances have an impressive internet connection, so you can omit the data parameter because the dataset will be download in a few milliseconds.
+I've already uploaded for you the [MNIST](https://www.floydhub.com/redeipirati/datasets/mnist) dataset if you want to play with it. FloydHub istances have an impressive internet connection, so you can omit the data parameter because the dataset will be download in a few milliseconds.
 
 You can find my public project [here](https://www.floydhub.com/redeipirati/projects/artistic-style-transfer/1).
 
@@ -115,9 +115,9 @@ You can find my public project [here](https://www.floydhub.com/redeipirati/proje
 
 I reccomend to run these notebook with a GPU istance(it should take about 5/4 minutes per training vs about an hour on a CPU istance):
 
-4. Convolutional Neural Network based Image Classifier
-5. VGG Net 16 the easy way
-6. Artistic style transfer with a repurposed VGG Net 16
+4. [Convolutional Neural Network based Image Classifier](notebooks/4_Convolutional_Neural_Network-based_Image_Classifier.ipynb)
+5. [VGG Net 16 the easy way](notebooks/5_VGG_Net_16_the_easy_way.ipynb)
+6. [Artistic style transfer with a repurposed VGG Net 16](notebooks/6_Artistic_style_transfer_with_a_repurposed_VGG_Net_16.ipynb)
 
 Floyd-CLI command:
 
