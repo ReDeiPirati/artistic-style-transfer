@@ -1,6 +1,6 @@
 # Convolutional neural networks for artistic style transfer
 
-![Author credit and first slide page](notebooks/images/Author_front)
+![Author credit and first slide page](notebooks/images/Author_front.png)
 
 This repository contains (TensorFlow and Keras) code that goes along
 with a [related blog post][blog-post] and [talk
