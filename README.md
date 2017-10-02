@@ -1,5 +1,7 @@
 # Convolutional neural networks for artistic style transfer
 
+![Author credit and first slide page](notebooks/images/Author_front)
+
 This repository contains (TensorFlow and Keras) code that goes along
 with a [related blog post][blog-post] and [talk
 (PDF)][talk-slides]. Together, they act as a systematic look at
@@ -8,53 +10,6 @@ style transfer as a motivating example. The blog post provides context
 and covers the underlying theory, while working through the Jupyter
 notebooks in this repository offers a more hands-on learning
 experience.
-
-If you have any questions about any of this stuff, feel free to [open
-an issue][support-issue] or tweet at me: [@copingbear][twitter].
-
-## Setup
-
-1. Install Python (2.7), pip and virtualenv on your machine. The
-instructions to do this depend on your operating system (Linux, macOS,
-Windows), but there are many tutorials on the internet that should
-help you get started.
-
-2. Once you have the above setup, it is quite easy to setup the
-requirements for the notebooks in this repository. First you clone a
-copy of this repository:
-
-   ````
-   git clone https://github.com/hnarayanan/artistic-style-transfer.git
-   ````
-
-3. Then you navigate to this folder in your shell and then install the
-requirements needed for the Jupyter notebooks.
-
-   ````
-   cd artistic-style-transfer
-   virtualenv venv
-   source venv/bin/activate
-   pip install -r requirements.txt
-   ````
-
-4. If it doesn't exist, create a file called `~/.keras/keras.json` and
-make sure it looks like the following:
-
-   ````
-   {
-       "image_dim_ordering": "tf",
-       "epsilon": 1e-07,
-       "floatx": "float32",
-       "backend": "tensorflow"
-   }
-   ````
-
-5. That's it! You can now start Jupyter and browse, open, run and
-modify the notebooks.
-
-   ````
-   jupyter notebook
-   ````
 
 ## Contents
 
@@ -89,11 +44,11 @@ modify the notebooks.
 
 First of all, create a new FloydHub project following [this guide](http://docs.floydhub.com/guides/basics/create_new/), then install the [Floyd-CLI](http://docs.floydhub.com/guides/basics/install/) and run the [login command](http://docs.floydhub.com/guides/basics/login/). After logged in, we are ready to get our hands dirty with this amazing tutorial which covers the basic concepts of Machine Learning, Deep Learning and style transfer.
 
-I have chosen to split the tutorial in two parts: the first one which can be followed with a CPU-istance and the other one with a GPU istance to speed up the training.
+I have chosen to split the tutorial in two parts: the first one which can be followed with a CPU-instance and the other one with a GPU instance to speed up the training.
 
-### PART 1 - CPU ISTANCE
+### PART 1 - CPU INSTANCE
 
-With a CPU istance you will be able to run the following Notebooks:
+With a CPU instance you will be able to run the following Notebooks:
 
 1. [Linear Image Classifier](notebooks/1_Linear_Image_Classifier.ipynb)
 2. [Neural Network based Image Classifier](notebooks/2_Neural_Network-based_Image_Classifier-1.ipynb)
@@ -102,18 +57,17 @@ With a CPU istance you will be able to run the following Notebooks:
 Floyd-CLI command:
 
 ```bash
-floyd run --env tensorflow-1.0:py2 --data redeipirati/datasets/mnist/1 --mode jupyter
+floyd run --env tensorflow-1.0:py2 --data redeipirati/datasets/mnist/1:input --mode jupyter
 ```
 
 Note:
 
-I've already uploaded for you the [MNIST](https://www.floydhub.com/redeipirati/datasets/mnist) dataset if you want to play with it. FloydHub istances have an impressive internet connection, so you can omit the data parameter because the dataset will be download in a few milliseconds.
+I've already uploaded for you the [MNIST](https://www.floydhub.com/redeipirati/datasets/mnist) dataset if you want to play with it. FloydHub instances have an impressive internet connection, so you can omit the data parameter because the dataset will be download in a few milliseconds.
 
-You can find my public project [here](https://www.floydhub.com/redeipirati/projects/artistic-style-transfer/1).
 
-### PART 2 - GPU ISTANCE
+### PART 2 - GPU INSTANCE
 
-I reccomend to run these notebook with a GPU istance(it should take about 5/4 minutes per training vs about an hour on a CPU istance):
+I reccomend to run these notebook with a GPU instance(it should take about 5/4 minutes per training vs about an hour on a CPU instance):
 
 4. [Convolutional Neural Network based Image Classifier](notebooks/4_Convolutional_Neural_Network-based_Image_Classifier.ipynb)
 5. [VGG Net 16 the easy way](notebooks/5_VGG_Net_16_the_easy_way.ipynb)
@@ -122,14 +76,13 @@ I reccomend to run these notebook with a GPU istance(it should take about 5/4 mi
 Floyd-CLI command:
 
 ```bash
-floyd run --gpu --env tensorflow-1.0:py2 --data redeipirati/datasets/mnist/1 --mode jupyter
+floyd run --gpu --env tensorflow-1.0:py2 --data redeipirati/datasets/mnist/1:input --mode jupyter
 ```
 
 Note:
 
 Notebooks 5 and 6 will download the VGGnet pretrained models(about 800MB of data), but as i said before they will be download in a few seconds.
 
-You can find my public project [here](https://www.floydhub.com/redeipirati/projects/artistic-style-transfer/2).
 
 ### Contribution
 
